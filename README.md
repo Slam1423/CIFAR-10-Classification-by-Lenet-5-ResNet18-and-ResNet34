@@ -10,37 +10,7 @@
 
 （1）Lenet5
 
-这里Lenet5由两层卷积层、两层average pooling层以及三层全连接层组成，模型结构如下：（按照python输出结构格式）
-
-Lenet5(
-
-  (conv_unit): Sequential(
-  
-    (0): Conv2d(3, 6, kernel_size=(5, 5), stride=(1, 1))
-    
-    (1): AvgPool2d(kernel_size=2, stride=2, padding=0)
-    
-    (2): Conv2d(6, 16, kernel_size=(5, 5), stride=(1, 1))
-    
-    (3): AvgPool2d(kernel_size=2, stride=2, padding=0)
-    
-  )
-  
-  (fully connected_unit): Sequential(
-  
-    (0): Linear(in_features=400, out_features=120, bias=True)
-    
-    (1): ReLU()
-    
-    (2): Linear(in_features=120, out_features=84, bias=True)
-    
-    (3): ReLU()
-    
-    (4): Linear(in_features=84, out_features=10, bias=True)
-    
-  )
-  
-)
+这里Lenet5由两层卷积层、两层average pooling层以及三层全连接层组成，结构如下：
 
 由于CIFAR10中图片属于10个类别，因此我们最后一层全连接层的输出维度为10，并且采用交叉熵为损失函数，采用Adam作为优化器，batch_size=32，然后进行了40次迭代，最终分类准确率维持在54%左右。我们认为其准确率无法进一步提升的原因是Lenet5本身层次较浅，无法学习到图片中深层次的特征，因而分类准确度很难再有大的突破。
 
