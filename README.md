@@ -12,7 +12,7 @@
 
 这里Lenet5由两层卷积层、两层average pooling层以及三层全连接层组成，结构如下：
 
-![image](https://github.com/MaiEmily/map/blob/master/public/image/20190528145810708.png)
+![image](https://github.com/Slam1423/CIFAR-10-Classification-by-Lenet-5-and-ResNet18/blob/main/lenet5.jpg)
 
 由于CIFAR10中图片属于10个类别，因此我们最后一层全连接层的输出维度为10，并且采用交叉熵为损失函数，采用Adam作为优化器，batch_size=32，然后进行了40次迭代，最终分类准确率维持在54%左右。我们认为其准确率无法进一步提升的原因是Lenet5本身层次较浅，无法学习到图片中深层次的特征，因而分类准确度很难再有大的突破。
 
