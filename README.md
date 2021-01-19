@@ -1,8 +1,11 @@
 # CIFAR-10-Classification-by-Lenet-5-and-ResNet18
 
 本题采用了Lenet5和ResNet18两种卷积神经网络结构对CIFAR10数据集训练分类器，最终表现是ResNet18明显好于Lenet5，从而印证了残差网络的强大的训练能力。实验步骤如下：
+
 1、数据的处理与准备
+
 我们使用python的torch模块中自带的CIFAR10数据集，将CIFAR10数据集中的图片大小统一设为32*32，并且转换为张量数据类型。
+
 2、模型构建、训练以及结果
 （1）Lenet5
 这里Lenet5由两层卷积层、两层average pooling层以及三层全连接层组成，模型结构如下：（按照python输出结构格式）
