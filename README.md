@@ -1,6 +1,6 @@
 # CIFAR-10-Classification-by-Lenet-5-and-ResNet18
 
-采用Lenet5和ResNet18两种卷积神经网络结构对CIFAR10数据集训练分类器，最终表现是ResNet18明显好于Lenet5，从而印证了残差网络的强大的训练能力。实验步骤如下：
+采用Lenet5、ResNet18以及ResNet34三种卷积神经网络结构对CIFAR10数据集训练分类器，最终表现是ResNet18和ResNet34分类效果明显好于Lenet5，但训练时间更长。而ResNet18和ResNet34分类效果相近。具体实验细节如下：
 
 1、数据的处理与准备
 
@@ -20,7 +20,7 @@
 
 为弥补Lenet5深度不够的缺陷，我们采用更深层次的残差网络——ResNet18，我们构建的ResNet18结构大体由卷积层、Batch Normalization层、residual unit1、residual unit2、residual unit3、residual unit4以及全连接层构成。其中，每个residual unit都由两个卷积层、两个Batch Normalization层构成。
 
-我们同样将最后一层全连接层的输出维度设置为10，以匹配预测类别数。采用交叉熵作为损失函数，Adam作为优化器，batch_size=32，然后运行了6个小时，共7次迭代（本人的笔记本电脑不含cuda，只能使用cpu训练，速度较慢），但每一次迭代后分类准确度都有明显提高，最终测试集上准确率达到了78.42%，相较于Lenet5网络结构，ResNet18训练效果提升了很多。下图展现了两种模型在测试集上分类准确度随时间的变化情况。
+！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！！
 
 ![image](https://github.com/Slam1423/CIFAR-10-Classification-by-Lenet-5-and-ResNet18/blob/main/Lenet5%E4%B8%8EResNet18%E5%AF%B9%E6%AF%94.png)
 
@@ -28,6 +28,6 @@
 
 下一步工作的展望：
 
-1、时间充裕的情况下，使用ResNet18网络再进行更多步的迭代，直到准确度的提升达到饱和为止。 
+1、阅读http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html#43494641522d3130上具有更高准确率的论文，优化网络结构。
 
-2、尝试更深层的残差网络模型，如ResNet34、ResNet50等，应该会有更大的提升。
+2、尝试更深层的残差网络模型，如ResNet50、ResNet101等，若分类效果与ResNet18和ResNet34相近，则分析其分类效果无法进一步改善的原因。
