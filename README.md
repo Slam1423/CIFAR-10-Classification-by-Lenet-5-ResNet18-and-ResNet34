@@ -28,6 +28,6 @@
 
 下一步工作的展望：
 
-1、阅读http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html#43494641522d3130上具有更高准确率的论文，优化网络结构。
+1、阅读http://rodrigob.github.io/are_we_there_yet/build/classification_datasets_results.html#43494641522d3130 上具有更高准确率的论文，优化网络结构。
 
 2、尝试更深层的残差网络模型，如ResNet50、ResNet101等，若分类效果与ResNet18和ResNet34相近，则分析其分类效果无法进一步改善的原因。
