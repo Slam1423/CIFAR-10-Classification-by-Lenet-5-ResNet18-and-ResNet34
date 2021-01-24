@@ -1,6 +1,6 @@
 # CIFAR-10-Classification-by-Lenet-5,ResNet18 and ResNet34
 
-采用Lenet5、ResNet18以及ResNet34三种卷积神经网络结构对CIFAR10数据集训练分类器，最终表现是ResNet18和ResNet34分类效果明显好于Lenet5，但训练时间更长。而ResNet18和ResNet34分类效果相近。具体实验细节如下：
+采用Lenet5、ResNet18以及ResNet34三种卷积神经网络结构对CIFAR10数据集训练分类器，最终表现是ResNet18和ResNet34分类效果明显好于Lenet5，但训练时间更长。而ResNet18和ResNet34分类效果相近。（在DBCloud 1080Ti上训练）具体实验细节如下：
 
 1、数据的处理与准备
 
@@ -22,7 +22,7 @@
 
 ![image](https://github.com/Slam1423/CIFAR-10-Classification-by-Lenet-5-and-ResNet18/blob/main/Lenet5%E4%B8%8EResNet18%E5%AF%B9%E6%AF%94.png)
 
-由此可以发现，Lenet5网络结构准确率达到54%左右之后便无法继续提升，并且还会出现一定的下降，其原因应为其深度不够。而ResNet18和ResNet34准确率有更为持久的提升，但在迭代到，并且ResNet18分类效果稍好于ResNet34的分类效果。
+由此可以发现，Lenet5网络结构准确率达到54%左右之后便无法继续提升，并且还会出现一定的下降，其原因应为其深度不够。而ResNet18和ResNet34准确率有更为持久的提升，但在训练500s之后分类准确率提升效果不再明显，ResNet18分类效果稍好于ResNet34的分类效果。
 
 下一步工作的展望：
 
